@@ -1,0 +1,115 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+        \text{I did not work in a group}
+
+        \text{I did not consult without anyone my group member}
+
+        \text{I did not consult any non-class materials}
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{In each of the following situations, indicate whether $f = O(g)$, or $f = \Omega(g)$,
+     or both (in which case $f = \Theta(g)$). Give a one sentence justification for each of your answers.}
+
+    a) $f(n) = n^{1.5}$, $g(n) = n^{1.3} \rightarrow \underline{f = \Omega(g)}$ and not $O(g)$ 
+    because the exponent of $f$ is greater than 
+    \tabto{27pt} the exponent in $g$. 
+    
+    \vspace{5pt}
+
+    b) $f(n) = 2^{n-1}$, $g(n) = 2^n \rightarrow \underline{f = \Theta(g)}$ 
+    because $f(n) = \frac{1}{2} \cdot 2^n$, and since we disregard the 
+    \tabto{28pt} coefficient, we know that asymptotically $f$ is $2^n$, which is equivalent to $g$.
+
+    \vspace{5pt}
+
+    c) $f(n) = n^{1.3 \text{log}(n)}$, $g(n) = n^{1.5} \rightarrow \underline{f = \Omega(g)}$ 
+    because simply comparing the exponents shows 
+    \tabto{27pt} that $f$'s exponent will grow faster than $g$'s because $f$'s exponent grows based on $n$ while $g$'s 
+    \tabto{27pt} is constant.
+
+    \vspace{5pt}
+
+    d) $f(n) = 3^n$, $g(n) = n \cdot 2^n \rightarrow \underline{f = \Omega(g)}$ 
+    because based on the rule of exponential functions for 
+    \tabto{28pt} asymptotic growth, the larger the base of the exponent, the faster it will grow. Since $3 > 2$, 
+    \tabto{28pt} $f$ will grow faster than $g$.
+
+    \vspace{5pt}
+
+    e) $f(n) = (\text{log}\ n)^{100}$, $g(n) = n^{0.1} \rightarrow \underline{f = O(g)}$ 
+    because log($n$) grows slower than $n$, and since 
+    \tabto{28pt} the function is dependent on the base of the exponent, $g$ will grow faster than $f$.
+
+    \vspace{5pt}
+
+    f) $f(n) = n$, $g(n) = (\text{log}\ n)^{\text{log log} n} \rightarrow \underline{f = O(g)}$ 
+    because $g$ is an exponential function and $f$ is 
+    \tabto{28pt} linear, thus $g$ will grow faster than $f$.
+
+    \vspace{5pt}
+
+    g) $f(n) = 2^n$, $g(n) = n! \rightarrow \underline{f = O(g)}$
+    because factorial grows much faster than any exponential 
+    \tabto{28pt} function.
+
+    \vspace{5pt}
+
+    h) $f(n) = \text{log}(e^n)$, $g(n) = n \text{log}n \rightarrow \underline{f = O(g)}$ 
+    because we can simplify $f$ down to $n$log($e$). Since
+    \tabto{28pt} log($e$) is a numerical value, we can drop it and see that $f$ is a linear function, thus grows
+    \tabto{28pt} slower than $n$log$n$.
+
+    \vspace{5pt}
+
+    i) $f(n) = n + \text{log}n$, $g(n) = n + (\text{log}n)^2 \rightarrow \underline{f = \Theta(g)}$
+    because $($log$n)^2$ grows slower than $n$, thus 
+    \tabto{28pt} both $f$ and $g$ exhibit linear growth.
+
+    \vspace{5pt}
+
+    j) $f(n) = 5n + \sqrt{n}$, $g(n) = \text{log}n + n \rightarrow \underline{f = \Theta(g)}$
+    because both $\sqrt{n}$ and log$n$ grow slower than 
+    \tabto{28pt} linear growth, thus, both $f$ and $g$ exhibit linear growth.
+
+
+    \question[2]{}
+
+
+\end{document}
