@@ -1,0 +1,49 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{geometry}
+\usepackage{pslatex}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{color}
+\geometry{ margin = 1.0in }
+
+%%% TODO modify these variables %%%
+\def\homeworknum{1}
+\def\myname{Alice}
+\def\myaccessid{xyz1234}
+\def\myrecitation{3}
+%%%%
+
+\pagestyle{fancy}
+\lhead{{\bf CMPSC 465 Fall 2022}}
+\chead{{\bf Assignment~\homeworknum}}
+\rhead{{\bf \today}}
+
+\newcounter{problemid}
+%\stepcounter{problemid}
+\def\newproblem{\clearpage\newpage{\bf Problem~\arabic{problemid}\
+stepcounter{problemid}}\hfill\fbox{\parbox{0.16\textwidth}{\bf Points:}}\par}
+
+\setlength\parindent{0em}
+\setlength\parskip{8pt}
+\setlength{\fboxsep}{6pt}
+
+\begin{document}
+
+\framebox[\textwidth]{
+    \parbox{0.96\textwidth}{
+        \parbox{0.12\textwidth}{\bf Name:}\parbox{0.6\textwidth}{\myname}\\
+        \parbox{0.12\textwidth}{\bf Access ID:}\parbox{0.6\textwidth}{\myaccessid}\\
+        \parbox{0.12\textwidth}{\bf Recitation:}\parbox{0.6\textwidth}{\myrecitation}
+    }
+}
+%% your solutions %%%
+\newproblem
+Your solution starts here ...
+
+$Test$ hello world $\Omega$
+\newproblem
+Your solution starts here ...
+\newproblem
+Your solution starts here ...
+\end{document}

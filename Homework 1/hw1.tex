@@ -8,6 +8,7 @@
 \usepackage{dirtytalk}
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
 
 % https://www.messletters.com/en/big-text/
 
@@ -100,16 +101,65 @@
 
     i) $f(n) = n + \text{log}n$, $g(n) = n + (\text{log}n)^2 \rightarrow \underline{f = \Theta(g)}$
     because $($log$n)^2$ grows slower than $n$, thus 
-    \tabto{28pt} both $f$ and $g$ exhibit linear growth.
+    \tabto{26pt} both $f$ and $g$ exhibit linear growth.
 
     \vspace{5pt}
 
     j) $f(n) = 5n + \sqrt{n}$, $g(n) = \text{log}n + n \rightarrow \underline{f = \Theta(g)}$
     because both $\sqrt{n}$ and log$n$ grow slower than 
-    \tabto{28pt} linear growth, thus, both $f$ and $g$ exhibit linear growth.
+    \tabto{26pt} linear growth, thus, both $f$ and $g$ exhibit linear growth.
 
+    \newpage
 
     \question[2]{}
+    
+    a) Prove that $R(i) \geq  3^{i/2}\ \forall i \geq 2$ where $R(i) = R(i - 1) + R(i - 2) + R(i - 3) $
+    \vspace{5pt}
+    \tabto{28pt} Proof:
+    \tabto{28pt} We proceed by induction on the variable $i$.
+    \tabto{28pt} \textbf{Base Case} ($i = 2, 3, 4$):
+    \tabto{28pt} $R(2) = 3$ and $3^{2/2} = 3$, thus the case holds
+    \tabto{28pt} $R(3) = R(2) + R(1) + R(0) = 3+2+1=6$ and $3^{3/2} \approx 5.196$, thus the case holds
+    \tabto{28pt} $R(4) = R(3) + R(2) + R(1) = 6+3+2=11$ and $3^{4/2} = 9$, thus the case holds
+    
+    \vspace{5pt}
+
+    \tabto{28pt} \textbf{Inductive Hypothesis} ($i = n$): 
+    \tabto{28pt} For any arbitrary positive integer $i = n$ where $n \geq 2$, assume that $R(n) \geq 3^{n/2}$ 
+    \tabto{28pt} This means that $R(n - 1) + R(n - 2) + R(n - 3) \geq 3^{n/2}$
+
+    \vspace{5pt}
+
+    \tabto{28pt} \textbf{Inductive Step} ($i = n + 1$): 
+    \tabto{28pt} We have to show that $R(n + 1) \geq 3^{(n + 1)/2}$
+    \tabto{28pt} Expanding this, we get $R(n) + R(n - 1) + R(n - 2) \geq 3^{(n + 1)/2}$
+    \tabto{28pt} From the inductive hypothesis, we know that $R(n), R(n - 1), R(n - 2)$ holds.
+    \tabto{28pt} Plugging this in, we can say that $R(n + 1) \geq 3^{0.5n} + 3^{0.5n - 0.5} + 3^{0.5n - 1}$
+    \tabto{217pt} = $3^{0.5n}(1 + 3^{-0.5} + 3^{-1})$
+    \tabto{217pt} = $3^{0.5n}(\frac{3+4\sqrt3}{3\sqrt3})$
+    \tabto{217pt} = $3^{0.5n}(1.911)$
+    \tabto{28pt} So, $R(n + 1) \geq 3^{0.5n}(1.911) \geq 3^{0.5n}(\sqrt3)$
+    \tabto{28pt} Since $1.911 > \sqrt3$, the statement $R(n + 1) \geq 3^{(n + 1)/2}$ holds.
+    \tabto{28pt} Therefore, $R(i) \geq  3^{i/2}\ \forall i \geq 2.\ \square$
+
+    \vspace{5pt}
+
+    b) Recursion Tree
+
+    \begin{forest}
+        [$R(i)$
+            [$R(i - 1)$[$R(i - 2)$][$R(i - 3)$][$R(i - 4)$]]
+            [$R(i - 2)$[$R(i - 3)$][$R(i - 4)$][$R(i - 5)$]]
+            [$R(i - 3)$[$R(i - 4)$][$R(i - 5)$][$R(i - 6)$]]]
+    \end{forest}
+
+    \newpage
+
+    \question[3]{Prove that $O_1(g(n)) = O_2(g(n))\ \forall g$}
+
+    $O_1(g(n)) = \{f(n): \exists c_1, n_0 > 0 \text{ s.t. }f(n) \leq c_1g(n), \forall n \geq n_0\}$
+    
+    $O_2(g(n)) = \{f(n): \exists c_2 >0 \text{ s.t. } f(n) \leq c_2g(n), \forall n > 0\}$
 
 
 \end{document}
