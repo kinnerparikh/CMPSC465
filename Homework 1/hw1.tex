@@ -13,7 +13,7 @@
 % https://www.messletters.com/en/big-text/
 
 \newcommand{\question}[2][]{\begin{flushleft}
-        \textbf{Question #1}: \textit{#2}
+        \textbf{Problem #1}: \textit{#2}
 
 \end{flushleft}}
 
@@ -33,19 +33,27 @@
         \today}        % Change to due date if preferred
         \vspace{40pt}
 
-        \text{I did not work in a group}
 
-        \text{I did not consult without anyone my group member}
-
-        \text{I did not consult any non-class materials}
         \newpage
         
 \end{center}}
 \begin{document}
     \maketitletwo[1]  % Optional argument is assignment number
     %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I did not work in a group
     
-    \question[1]{In each of the following situations, indicate whether $f = O(g)$, or $f = \Omega(g)$,
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{In each of the following situations, indicate whether $f = O(g)$, or $f = \Omega(g)$,
      or both (in which case $f = \Theta(g)$). Give a one sentence justification for each of your answers.}
 
     a) $f(n) = n^{1.5}$, $g(n) = n^{1.3} \rightarrow \underline{f = \Omega(g)}$ and not $O(g)$ 
@@ -111,7 +119,7 @@
 
     \newpage
 
-    \question[2]{}
+    \question[3]{}
     
     a) Prove that $R(i) \geq  3^{i/2}\ \forall i \geq 2$ where $R(i) = R(i - 1) + R(i - 2) + R(i - 3) $
     \vspace{5pt}
@@ -155,11 +163,31 @@
 
     \newpage
 
-    \question[3]{Prove that $O_1(g(n)) = O_2(g(n))\ \forall g$}
+    \question[4]{Prove that $O_1(g(n)) = O_2(g(n))\ \forall g$}
 
     $O_1(g(n)) = \{f(n): \exists c_1, n_0 > 0 \text{ s.t. }f(n) \leq c_1g(n), \forall n \geq n_0\}$
     
     $O_2(g(n)) = \{f(n): \exists c_2 >0 \text{ s.t. } f(n) \leq c_2g(n), \forall n > 0\}$
+
+    \vspace{5pt}
+
+    Proof:
+
+    In $O_1$, we have that $\exists n_0 > 0$. We also know that $\forall n \geq n_0$, so we can say that $\forall n \geq n_0 > 0$. 
+    
+    Thus, we can conclude $n > 0$. Substituting this to the definition of $O_1$, we can say that:
+
+    $O_1(g(n)) = \{f(n): \exists c_1, n_0 > 0 \text{ s.t. }f(n) \leq c_1g(n), \forall n > 0\}$. Furthermore, since both set 
+    
+    builders state that $\exists c_1, c_2 > 0$, we can say that $c_1 = c_2 = c_{all}$. Thus, the set builders will be:
+    
+    $O_1(g(n)) = \{f(n): \exists c_{all} >0 \text{ s.t. } f(n) \leq c_{all}g(n), \forall n > 0\}$
+    
+    $O_2(g(n)) = \{f(n): \exists c_{all} >0 \text{ s.t. } f(n) \leq c_{all}g(n), \forall n > 0\}$
+
+    Thus, we can conclude that $O_1 = O_2$
+    $\square$
+
 
 
 \end{document}
