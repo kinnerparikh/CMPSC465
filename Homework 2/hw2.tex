@@ -1,0 +1,192 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I did not work in a group
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Analyzing run time.}
+
+    1. $\sum^{n}_{i = 1} \frac{n-i}{5} = \frac{1}{5}\sum^{n}_{i = 1} n - i = \frac{1}{5} \cdot (\sum^{n}_{i = 1} n  - \sum^{n}_{i = 1} i) = \frac{1}{5} \cdot (n^2 - \frac{n^2 + n}{2}) = \frac{n^2 - n}{10} = \underline{\Theta(n^2)}$
+
+    \vspace*{10 pt}
+
+    2. $\sum^{n/4}_{i = 1} n - 4i = \sum^{n/4}_{i = 1} n - \sum^{n/4}_{i = 1} 4i = \Theta(n^2) + \Theta(4 \cdot \frac{n/4 (n/4 + 1)}{2}) = \Theta(\frac{33n^2 + 4n}{32}) = \underline{\Theta(n^2)}$
+
+    \vspace*{10pt}
+
+    3. $\lfloor \log n \rfloor + \sum^{\lfloor \log n \rfloor}_{i = 1} \frac{n}{2^i} = \lfloor \log n \rfloor + n \cdot \sum^{\lfloor \log n \rfloor}_{i = 1} 2^{-i} = \underline{\Theta(n)}$
+
+    \newpage
+
+    \question[3]{Polynomials and Horner's Rule}
+
+    a) $\sum^{n}_{i = 0} a_i \cdot x_0^i$
+    
+    \hspace{12pt}Number of Multiplications = $\frac{n(n + 1)}{2}$ because each power $x^n_0$ is $n - 1$ multiplications, and you 
+    
+    \hspace{12pt}add one for multiplying $a_i$.
+    
+    \hspace{12pt}Number of Sums = $n$
+
+    \vspace{5pt}
+
+    b) LI = $\sum^{n - 1}_{i = 0} a_{n - i}x^{n - i - 1}$
+
+    \vspace{5pt}
+
+    \textbf{Initialization:} At the start of the 1st iteration, the loop invariant states that $z = a_n$. Since 
+    
+    this represents the coefficient for a polynomial with a maximum coefficient of 0, this is true.
+
+    \vspace{5pt}
+
+    \textbf{Maintenance:} Assume that LI holds at the start of iteration $j$. This means that the polynomial 
+    
+    is $(a_{n - j} x^{n - j - 1}) + (a_{n - j + 1} x ^ {n - j}) + (a_{n - j + 2} \cdot x^{n - j + 1}) + ... + (a_{n - 1}x^{n - 2}) + (a_nx^{n - 1})$. We need 
+    
+    to show that at iteration $j + 1$, the LI consists of the $j$ largest polynomial powers of $x$ with their 
+    
+    corresponsing coefficients. For $j + 1$, we simply just add $a_{n - j - 1} x^{n-j}$ to the function stated 
+    
+    above, which, by definition, is the $j + 1$ largest part of the polynomial.
+
+    \vspace{5pt}
+
+    \textbf{Termination:} We must argue that the fact that the LI holds at the start of iteration $n$ implies
+    
+    the algorithm correct. 
+
+    c) 
+
+    \newpage
+
+    \question[4]{Solving recurrences}
+
+    (a) $T(n) = 2T(n / 2) + \sqrt{n}$
+    
+    \hspace{13pt} Branching Factor = 2
+    
+    \hspace{13pt} Height = $\log_2n $
+
+    \hspace{13pt} Size of subproblems at depth k = $n/2^k$
+
+    \hspace{13pt} Number of subproblems at depth k = $2^k$
+
+    \hspace{13pt} $W_k = 2^k \sqrt{n/2^k}$
+
+    \hspace{13pt} $\sum^{\log_2 n}_{k = 0} W_k = \sum^{\log_2 n}_{k = 0} 2^k \sqrt{n/2^k} = \Theta(2^{\log_2n} \cdot \sqrt{n/(2^{\log_2n})}) = \underline{\Theta(n)}$
+
+    \vspace{5pt}
+
+    (b) $T(n) = 2T(n / 3) + 1$
+
+    \hspace{13pt} Branching Factor = 2
+    
+    \hspace{13pt} Height = $\log_3n $
+
+    \hspace{13pt} Size of subproblems at depth k = $n / 3^k$
+    
+    \hspace{13pt} Number of subproblems at depth k = $2^k$
+
+    \hspace{13pt} $W_k = 2^k$
+
+    \hspace{13pt} $\sum^{\log_3 n}_{k = 0} W_k = \sum^{\log_3 n}_{k = 0} 2^k = \underline{\Theta(n^{\log_3 2})}$
+    
+    \vspace{5pt}
+
+    (c) $T(n) = 5T(n / 4) + n$
+
+    \hspace{13pt} Branching Factor = 5
+    
+    \hspace{13pt} Height = $\log_4n $
+
+    \hspace{13pt} Size of subproblems at depth k = $n / 4^k$
+    
+    \hspace{13pt} Number of subproblems at depth k = $5^k$
+
+    \hspace{13pt} $W_k = 5^k \cdot n/4^k) = (5/4)^k \cdot n$
+
+    \hspace{13pt} $\sum^{\log_2 n}_{k = 0} W_k = n \cdot \sum^{\log_2 n}_{k = 0} \frac{5}{4}^k = \underline{\Theta(n^{(\log_2 5) - 1})}$
+
+    \vspace{5pt} 
+
+    (d) $T(n) = 7T(n / 7) + n$
+
+    \hspace{13pt} Branching Factor = 7
+    
+    \hspace{13pt} Height = $\log_7n $
+
+    \hspace{13pt} Size of subproblems at depth k = $n / 7^k$
+    
+    \hspace{13pt} Number of subproblems at depth k = $7^k$
+
+    \hspace{13pt} $W_k = 7^k \Theta(n/7^k) = \Theta(n)$
+
+    \hspace{13pt} $\sum^{\log_7 n}_{k = 0} W_k = \sum^{\log_7 n}_{k = 0} \Theta(n) = \underline{\Theta(n \cdot \log_7n)}$
+
+    \vspace{5pt}
+
+    (e) $T(n) = 9T(n / 3) + n^2$
+
+    \hspace{13pt} Branching Factor = 9
+    
+    \hspace{13pt} Height = $\log_3n $
+
+    \hspace{13pt} Size of subproblems at depth k = $n / 3^k$
+    
+    \hspace{13pt} Number of subproblems at depth k = $9^k$
+
+    \hspace{13pt} $W_k = 9^k \cdot (n/3^k)^2 = n^2$
+
+    \hspace{13pt} $\sum^{\log_3 n}_{k = 0} W_k = \sum^{\log_3 n}_{k = 0} n^2 = \underline{\Theta(n^2 \cdot \log_3n)}$
+
+\end{document}
