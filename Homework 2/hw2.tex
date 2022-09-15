@@ -9,6 +9,7 @@
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
 \usepackage{forest}
+\usepackage{comment}
 
 % https://www.messletters.com/en/big-text/
 
@@ -78,40 +79,51 @@
     \hspace{12pt}Number of Sums = $n$
 
     \vspace{5pt}
-
-    b) LI = $\sum^{n - 1}_{i = 0} a_{n - i}x^{n - i - 1}$
-
-    \vspace{5pt}
-
-    \textbf{Initialization:} At the start of the 1st iteration, the loop invariant states that $z = a_n$. Since 
     
-    this represents the coefficient for a polynomial with a maximum coefficient of 0, this is true.
+
+    b) LI = $\sum^{n - i}_{j = 0} a_{n - j}x^{n - i - j}$
 
     \vspace{5pt}
 
-    \textbf{Maintenance:} Assume that LI holds at the start of iteration $j$. This means that the polynomial 
+    \hspace{10pt} \textbf{Initialization:} At the start of the 1st iteration where $i = n$, the loop invariant states that 
     
-    is $(a_{n - j} x^{n - j - 1}) + (a_{n - j + 1} x ^ {n - j}) + (a_{n - j + 2} \cdot x^{n - j + 1}) + ... + (a_{n - 1}x^{n - 2}) + (a_nx^{n - 1})$. We need 
+    \hspace{10pt} $z = a_n$. Since this represents the coefficient for a polynomial with a maximum coefficient of 
     
-    to show that at iteration $j + 1$, the LI consists of the $j$ largest polynomial powers of $x$ with their 
+    \hspace{10pt} 0, this is true.
+
+    \vspace{5pt}
+ 
+    \hspace{12pt}\textbf{Maintenance:} Assume that LI holds at the start of iteration $k_0$. This means that the 
     
-    corresponsing coefficients. For $j + 1$, we simply just add $a_{n - j - 1} x^{n-j}$ to the function stated 
+    \hspace{12pt}polynomial is $a_{k_0} + (a_{k_0 + 1} x)  + ... + (a_{n - 1}x^{n - k_0 - 1}) + (a_nx^{n - k_0})$. We need to show that at 
     
-    above, which, by definition, is the $j + 1$ largest part of the polynomial.
+    \hspace{12pt}iteration $k_0 + 1$, the LI consists of the $k$ largest polynomial powers of $x$ with their corresponsing 
+    
+    \hspace{12pt}coefficients. In the next loop, we get $k = k_0 - 1$ where 
+    
+    \hspace{2.5cm}$z = a_{k_0 - 1} + (a_{k_0} x)  + ... + (a_{n - 1}x^{n - k_0}) + (a_nx^{n - k_0 + 1})$ 
+    
+    \hspace{12pt}simplifies to: $z = a_{k} + (a_{k + 1} x)  + ... + (a_{n - 1}x^{n - k - 1}) + (a_nx^{n - k})$ % simply just add $a_{n - j - 1} x^{n-j}$ to the function stated above, which, 
+    
+    \hspace{12pt}Therefore we can say that the LI holds for every iteration of the algorithm.
+
 
     \vspace{5pt}
 
-    \textbf{Termination:} We must argue that the fact that the LI holds at the start of iteration $n$ implies
+    \hspace{12pt}\textbf{Termination:} We must argue that the fact that the LI holds at the start of iteration $n$ 
     
-    the algorithm correct. Taking this from the LI, we get that the LI consists of coefficient $a_0$ to 
+    \hspace{10pt} implies the algorithm correct. When the algorithm stops, $i = 0$ so 
     
-    $a_n$ corresponding to their paired $x$ with powers 0 to $n$.
+    \hspace{10pt} $z = a_0 + a_1x + ... + a_{n - 1}x^{n - 1} + a_nx^n$. 
 
     \vspace{7pt}
 
+    
+
+
     c) Number of Sums = $n$
 
-    Number of Multiplications = $2n - 1$
+    \hspace{12pt}Number of Multiplications = $2n - 1$
 
     \newpage
 
