@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1663278122 "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.pdf" "hw2" 1663278177
-  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.aux" 1663278123 32 2d1df76398b3c48c6419a45a7331db2d ""
-  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.tex" 1663278175 6011 9f005cdf33d983a912203e1128697ae6 ""
+["pdflatex"] 1663278952 "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.pdf" "hw2" 1663278954
+  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.aux" 1663278953 32 2d1df76398b3c48c6419a45a7331db2d ""
+  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.tex" 1663278952 6239 398829eb1a4f2ac46175651e554e4b63 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -159,11 +159,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw2.aux" 1663278123 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "hw2.tex" 1663278175 6011 9f005cdf33d983a912203e1128697ae6 ""
+  "hw2.aux" 1663278953 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "hw2.tex" 1663278952 6239 398829eb1a4f2ac46175651e554e4b63 ""
   (generated)
+  "hw2.pdf"
+  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.pdf"
   "hw2.aux"
   "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.log"
-  "hw2.pdf"
   "hw2.log"
-  "/Users/kinner/Documents/School/CMPSC465/Homework 2/hw2.pdf"
