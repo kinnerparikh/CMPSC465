@@ -1,0 +1,99 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+\usepackage{comment}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I did not work in a group
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Solving recurrences}
+
+    a) $T(n) = 11T(n / 5) + 13n^{1.3}$
+
+    % $a = 11, b = 5, d = 1.3$
+
+    % $\Theta(13n^{1.3})$
+
+    $W_k = 11^k \times 13(n/5^k)^{1.3}$
+
+    $\sum_{k = 0}^{\log_5n} W_k = 13n^{1.3} \sum_{k = 0}^{\log_5n} \left(\frac{11}{5^{1.3}}\right)^k = \Theta(13n^{1.3} \cdot \left(\frac{11}{5^{1.3}}\right)^{\log_5n}) = \boxed{\Theta(13n^{\log_511})}$
+
+    \vspace{5pt}
+
+    b) $T(n) = 6T(n / 2) + n^{2.8}$
+
+    $ a = 6, b = 2, d = 2.8$
+
+    $\log_26 < 2.8$, so by Master's theorem, $\boxed{\Theta(n^{2.8})}$
+    % $W_k = 6^k \times (n/2^k)2.8$
+
+    \vspace{5pt}
+
+    c) $T(n) = 5T(n / 3) + \log^2n$
+
+    $W_k = 5^k \times \log^2(n/3^k)$
+
+    $\sum_{k = 0}^{\log_3n} W_k = \sum_{k = 0}^{\log_3n} 5^k \times (\log^2n - k\log^2(3)) = \Theta(5^{\log_3n} \cdot (\log^2n - \log_3n \cdot \log^23))$
+
+    \vspace{5pt}
+
+    d) $T(n) = T(n - 2) + \log n$
+
+    \newpage
+
+    \question[3]{Sorted Array}
+
+    \newpage
+    
+    \question[4]{Linear Time Sorting}
+
+
+\end{document}
