@@ -1,0 +1,68 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I did not work in a group
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Divide and Conquer}
+
+    \newpage
+
+    \question[3]{}
+
+    \newpage
+
+    \question[4]{}
+
+
+
+\end{document}

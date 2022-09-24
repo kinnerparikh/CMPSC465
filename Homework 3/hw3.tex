@@ -79,21 +79,100 @@
 
     c) $T(n) = 5T(n / 3) + \log^2n$
 
-    $W_k = 5^k \times \log^2(n/3^k)$
+    %$W_k = 5^k \times \log^2(n/3^k)$
 
-    $\sum_{k = 0}^{\log_3n} W_k = \sum_{k = 0}^{\log_3n} 5^k \times (\log^2n - k\log^2(3)) = \Theta(5^{\log_3n} \cdot (\log^2n - \log_3n \cdot \log^23))$
+    %$\sum_{k = 0}^{\log_3n} W_k = \sum_{k = 0}^{\log_3n} 5^k \times (\log^2n - k\log^2(3)) = \Theta(5^{\log_3n} \cdot (\log^2n - \log_3n \cdot \log^23))$
+
+    Lower Bound Case: $1 < \log^2n$ and $\log_35 > 1$
+
+    Upper Bound Case: $\log^2n < n$ and $\log_35 > n$
+
+    Thus, $\boxed{\Theta(n^{\log_35})}$.
 
     \vspace{5pt}
 
     d) $T(n) = T(n - 2) + \log n$
 
+    This will recurse $n/2$ times so total work will be $\sum_{k = 1}^{n/2}\log(2k)$.
+
+    This will be $\log(2) + \log(4) + ... + \log(\frac{n}{2} - 1) + \log(\frac{n}{2})$, this simplifies to $\log(n^n)$, thus $\boxed{\Theta(n\log n)}$.
+
     \newpage
 
     \question[3]{Sorted Array}
+
+    The basic structure for this algorithm is that you take an upper($u$) and lower($l$) bound of indeces 
+    and find the average($\texttt{avg} = \frac{u + l}{2})$ to check if the value at that index is equal to, greater than, or less 
+    than the index. If it is equal to the index, then we have found our $A[i] = i$. If $i < A[i]$, then we make a 
+    recursive call with $l$ staying as is, but $u = \texttt{avg}$. If $i > A[i]$, then we make a recursive call 
+    with $l = \texttt{avg}$ and $u$ staying as is. This will eventually converge to find the $A[i] = i$ in $O(\log n)$ 
+    time. This cuts the problem in half every single time because we are changing the bounds for which we 
+    search. For example, suppose we are given array: \texttt{[-2, -1, 1, 3, 6, 7, 10, 11]}. This will 
+    be broken down into this tree:
+
+    \begin{center}
+        \begin{forest}
+            [\texttt{[-2, -1, 1, 3, \hl{6}, 7, 10, 11]}
+                [\texttt{[-2, -1, \hl{1}, 3]}
+                    [\texttt{[-2, \hl{-1}]}[\texttt{[-2]}][\texttt{[-1]}]]
+                    [\texttt{[\hl{1}, 3]}[\texttt{[1]}][\texttt{[3]}]]
+                ] 
+                [\texttt{[6, \hl{7}, 10, 11]}
+                    [\texttt{[6, \hl{7}]} [\texttt{[6]}][\texttt{[7]}]]
+                    [\texttt{[\hl{10}, 11]} [\texttt{[10]}][\texttt{[11]}]]
+                ]
+            ]
+        \end{forest}
+    \end{center}
+
+    The highlighted numbers are those that will be compared to their index in the array. If the 
+    index is less than the value, it continues down the left side of the tree, and the opposite for if the 
+    index is greater than the value. Ultimately, this leads us to see that $T(n) = 2T(n/2) + 1$. Using 
+    Master's Theorem, we can see that $ a = 2, b = 2, d = 0$, which shows us that this will run in $O(\log n)$ time. 
+    
+    % [-2, -1, 2, 3, 6, 7, 10]
+    %   0   1  2  3  4  5  6
 
     \newpage
     
     \question[4]{Linear Time Sorting}
 
+    % Let us assume that the first of $x$ is 1. The algorithm is extremely straightforward, if $x[i] = i$, 
+    % then move on, but if it isn't, swap $x[i]$ and $x[x[i]]$. For example, if $i = 3$, then $x[i] = 6$, then whatever value is 
+    % at $x[6] (x[x[i]])$ will be swapped into $x[i]$ and the original $x[i]$ will be placed in 
+    % $x[6]$. We can iterate through the array once and perform these operations, and we will get a sorted
+    % array of integers which is, in essence, $O(n)$. The reason for the $M$ is that there could be a value which 
+
+    The algorithm for this is fairly straightforward. We iterate through the array once to find 
+    the largest and smallest value in the array, let us call these $x_{max}$ and $x_{min}$. We can then create $m$ 
+    number of buckets, one for each integer between $x_{max}$ and $x_{min}$, where $m = x_{max} - x_{min}$. Then 
+    passing through the array one more time, we can place the values into their respective buckets. 
+    Finally, from these buckets, we can place the values into $x$ in order, and we can say that $x$ is sorted.
+    As an example, take the array:
+    \begin{center}
+        $x$ = \texttt{[4, 9, 1, 4, 2, 0, 10, 2, 5, 2, 1, 8, 2, 6, 2, 5]}
+    \end{center}
+    We can do one pass through the array and see that $x_{min} = 0$ and $x_{max} = 10$. Then we can make 
+    buckets for all the values between 0 and 10. Running through the array one more time, we can 
+    place the number into its bucket. This would look like:
+    \newline
+        \texttt{
+            0 $\rightarrow$ [0] \newline
+            1 $\rightarrow$ [1, 1] \newline
+            2 $\rightarrow$ [2, 2, 2, 2, 2] \newline
+            3 $\rightarrow$ [] \newline
+            4 $\rightarrow$ [4, 4] \newline
+            5 $\rightarrow$ [5, 5] \newline
+            6 $\rightarrow$ [6] \newline
+            7 $\rightarrow$ [] \newline
+            8 $\rightarrow$ [8] \newline
+            9 $\rightarrow$ [9] \newline
+            10 $\rightarrow$ [10] \newline}
+    Then we can combine these in order to get:
+    \begin{center}
+        $x$ = \texttt{[0, 1, 1, 2, 2, 2, 2, 2, 4, 4, 5, 5, 6, 8, 9, 10]}
+    \end{center}
+    This will run in $O(n + m)$ because we pass through the array twice, which is $O(n)$, and then adding 
+    it from the buckets will take $O(m)$ time, so $O(n) + O(m) = O(n + m)$.
 
 \end{document}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  22 SEP 2022 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  23 SEP 2022 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/kinner/Documents/School/CMPSC465/Homework 3/hw3.tex"
-(/Users/kinner/Documents/School/CMPSC465/Homework 3/hw3.tex
+**"/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex"
+(/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -476,25 +476,23 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@copy@out=\write4
 \forest@externalize@max@outer@n=\count318
 \forest@externalize@inner@n=\count319
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write5
- Excluding comment 'comment') (/Users/kinner/Documents/School/CMPSC465/Homework 3/hw3.aux)
-\openout1 = `hw3.aux'.
+) (/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux)
+\openout1 = `hw4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -550,28 +548,20 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4] [5] (/Users/kinner/Documents/School/CMPSC465/Homework 3/hw3.aux) ) 
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] (/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux) ) 
 Here is how much of TeX's memory you used:
- 25850 strings out of 478994
- 595567 string characters out of 5858184
- 881605 words of memory out of 5000000
- 42987 multiletter control sequences out of 15000+600000
- 407205 words of font info for 43 fonts, out of 8000000 for 9000
+ 23897 strings out of 478994
+ 561866 string characters out of 5858184
+ 858133 words of memory out of 5000000
+ 41053 multiletter control sequences out of 15000+600000
+ 405002 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 121i,8n,117p,1652b,1836s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/Users/kinner/Documents/School/CMPSC465/Homework 3/hw3.pdf" (5 pages, 139212 bytes).
+ 101i,5n,102p,1632b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.pdf" (5 pages, 56575 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
