@@ -1,9 +1,9 @@
-PWD /Users/kinner/Documents/School/CMPSC465/Homework 4
+PWD /Users/kinner/Documents/School/CMPSC465/Homework 5
 INPUT /usr/local/texlive/2021/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex
-OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.log
+INPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.tex
+OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.log
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -668,55 +668,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/inlinedef/inlinedef.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/xspace.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/relsize/relsize.sty
-INPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux
-INPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux
-INPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux
-OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux
+INPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux
+INPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux
+INPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux
+OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -738,7 +693,7 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.pdf
+OUTPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
@@ -758,11 +713,13 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT /Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

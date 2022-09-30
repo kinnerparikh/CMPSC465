@@ -9,7 +9,6 @@
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
 \usepackage{forest}
-\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
 
 % https://www.messletters.com/en/big-text/
 
@@ -54,48 +53,35 @@
     
     \newpage
 
-    \question[2]{Divide and Conquer}
+    \question[2]{DFS Basics}
 
-    a) Pseudo-code
+    a) $A,\ B,\ D,\ E,\ G,\ F,\ C,\ H,\ I$
 
-    \begin{algorithm}
-        \SetKwFunction{findMajorityElement}{findMajorityElement}
-        \SetKwInOut{KwIn}{Input}
-        \SetKwInOut{KwOut}{Output}
+    \vspace{5pt}
 
-        \KwIn{An array $A[1 \ldots n]$ that may or may not contain a majority element (an element for which appears more than $n/2$ times in the array) }
-        \KwOut{The majority element}
-        $majorityElement= A[1],\ count = 1$
+    b) $A(1, 12), B(2, 11), D(3, 6), E(4, 5), G(7, 10), F(8, 9), C(13, 18), H(14, 17), I(15, 16)$
 
-        \For{$i \leftarrow 1$ \KwTo $n$}{
-            \uIf{count = 0}{
-                $majorityElement :e= A[i]$
+    \vspace{5pt}
 
-                $count \leftarrow 1$
-            }
-            \uElseIf{$majorityElement = A[i]$}{
-                $count := count + 1$
-            }
-            \Else(){
-                $count := count - 1$
-            }
-        }
+    c) Tree Edges: \hspace{16pt}\{$(A, B), (B, D), (D, E), (B, G), (G, F), (C, H), (H, I)$\}
 
-        \Return{$majorityElement$}
+    \hspace{12pt}Back Edges: \hspace{14pt}\{$(E, D)$\}
 
-        \caption{Finding majority element in an array}
-    \end{algorithm}
+    \hspace{12pt}Forward Edges: \{$(A, E), (C, I)$\}
 
-
+    \hspace{12pt}Cross Edges: \hspace{12pt}\{$(G, D)$\}
 
     \newpage
 
-    \question[3]{Reverse Graph}
+    \question[3]{Pre and Post Processing}
 
     \newpage
 
-    \question[4]{Graph Basics}
+    \question[4]{Linearization Basics}
 
+    `'
+
+    
 
 
 \end{document}
