@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  30 SEP 2022 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.18)  30 SEP 2022 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -565,15 +565,15 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
  [3] [4] [5] (/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux) ) 
 Here is how much of TeX's memory you used:
- 23945 strings out of 478994
- 562687 string characters out of 5858184
- 859133 words of memory out of 5000000
- 41085 multiletter control sequences out of 15000+600000
+ 24168 strings out of 478994
+ 566987 string characters out of 5858184
+ 873463 words of memory out of 5000000
+ 41308 multiletter control sequences out of 15000+600000
  406701 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,5n,102p,1632b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,8n,102p,1632b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf" (5 pages, 77719 bytes).
+Output written on "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf" (5 pages, 81272 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream

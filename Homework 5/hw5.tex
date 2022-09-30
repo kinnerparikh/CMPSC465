@@ -8,7 +8,7 @@
 \usepackage{dirtytalk}
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
-\usepackage{forest}
+\usepackage{forest, tikz}
 
 % https://www.messletters.com/en/big-text/
 
@@ -79,9 +79,64 @@
 
     \question[4]{Linearization Basics}
 
-    `'
-
+    a) (pre, post)
     
+    \vspace{3pt}
+
+    \begin{tikzpicture}[scale=1.5,auto=center]
+
+        \node[circle, draw] (a) at (1, 4-1) {$A$};
+        \node[circle, draw] (b) at (1, 2-1) {$B$};
+        \node[circle, draw] (c) at (3, 3-1) {$C$};
+        \node[circle, draw] (d) at (5, 4-1) {$D$};
+        \node[circle, draw] (e) at (5, 2-1) {$E$};
+        \node[circle, draw] (f) at (7, 3-1) {$F$};
+        \node[circle, draw] (g) at (9, 4-1) {$G$};
+        \node[circle, draw] (h) at (9, 2-1) {$H$};
+
+        \path[->,draw,thick]
+        (a) edge node[label = right:\text{(1, 14)}, above]{} (c)
+        (b) edge node[label = right:\text{(15, 16)}, below]{} (c)
+        (c) edge node[label = right:\text{(2, 9)}]{} (d)
+        (c) edge node[label = right:\text{(10, 13)}, above]{} (e)
+        (d) edge node[label = right:\text{(3, 8)}, above]{} (f)
+        (e) edge node[label = right:\text{(11, 12)}, below]{} (f)
+        (f) edge node[label = right:\text{(4, 5)}, below]{} (g)
+        (f) edge node[label = right:\text{(6, 7)}, above]{} (h)
+        ;
+        
+    \end{tikzpicture}
+
+    \vspace{4pt}
+
+    b) Source Nodes: $A, B$
+
+    \hspace{10pt} Sink Nodes: $G, H$
+
+    \vspace{4pt}
+
+    c) 
+
+    \begin{tikzpicture}[scale=0.9,auto=center]
+        \node[circle, draw] (a) at (0, 0) {$A$};
+        \node[circle, draw] (b) at (2, 0) {$B$};
+        \node[circle, draw] (c) at (4, 0) {$C$};
+        \node[circle, draw] (d) at (6, 0) {$D$};
+        \node[circle, draw] (e) at (8, 0) {$E$};
+        \node[circle, draw] (f) at (10, 0) {$F$};
+        \node[circle, draw] (g) at (12, 0) {$G$};
+        \node[circle, draw] (h) at (14, 0) {$H$};
 
 
+        \draw[->, thick] (a) to[bend right] (c);
+        \draw[->, thick] (b) to (c);
+        \draw[->, thick] (c) to (d);
+        \draw[->, thick] (c) to[bend right] (e);
+        \draw[->, thick] (d) to[bend left] (f);
+        \draw[->, thick] (f) to (g);
+        \draw[->, thick] (f) to[bend right] (h);
+        
+    \end{tikzpicture}
+
+    d) This graph will have 8 total linearizations 
 \end{document}
