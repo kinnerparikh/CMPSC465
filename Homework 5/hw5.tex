@@ -4,11 +4,13 @@
 \usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
 \usepackage{graphicx}  % This package allows the importing of images
 \usepackage{soul}
-\usepackage{amsfonts}
+\usepackage{amsfonts, amsmath}
 \usepackage{dirtytalk}
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
 \usepackage{forest, tikz}
+\usepackage{fontawesome}
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
 
 % https://www.messletters.com/en/big-text/
 
@@ -59,21 +61,127 @@
 
     \vspace{5pt}
 
+    
     b) $A(1, 12), B(2, 11), D(3, 6), E(4, 5), G(7, 10), F(8, 9), C(13, 18), H(14, 17), I(15, 16)$
-
+    
     \vspace{5pt}
-
+    
     c) Tree Edges: \hspace{16pt}\{$(A, B), (B, D), (D, E), (B, G), (G, F), (C, H), (H, I)$\}
-
+    
     \hspace{12pt}Back Edges: \hspace{14pt}\{$(E, D)$\}
-
+    
     \hspace{12pt}Forward Edges: \{$(A, E), (C, I)$\}
-
+    
     \hspace{12pt}Cross Edges: \hspace{12pt}\{$(G, D)$\}
+
+    \begin{tikzpicture}[scale=2,auto=center]
+
+        \node[circle, draw] (a) at (1, 2) {$A$};
+        \node[circle, draw] (b) at (2, 2) {$B$};
+        \node[circle, draw] (c) at (4, 2) {$C$};
+        \node[circle, draw] (d) at (2, 1) {$D$};
+        \node[circle, draw] (e) at (1, 1) {$E$};
+        \node[circle, draw] (f) at (3, 1) {$F$};
+        \node[circle, draw] (g) at (3, 2) {$G$};
+        \node[circle, draw] (h) at (4, 1) {$H$};
+        \node[circle, draw] (i) at (5, 2) {$I$};
+
+        \draw[->, thick] (a) tonode[above]{\textbf{T}} (b);
+        \draw[->, thick] (a) tonode[left]{\textbf{F}} (e);
+        \draw[->, thick] (b) tonode[left]{\textbf{T}} (d);
+        \draw[->, thick] (b) tonode[above]{\textbf{T}} (g);
+        \draw[->, thick] (c) tonode[left]{\textbf{T}} (h);
+        \draw[->, thick] (c) tonode[above]{\textbf{F}} (i);
+        \draw[->, thick] (d) to[bend right]node[below]{\textbf{T}} (e);
+        \draw[->, thick] (e) to[bend right]node[below]{\textbf{B}} (d);
+        \draw[->, thick] (g) to node[above]{\textbf{C}} (d);
+        \draw[->, thick] (g) to node[right]{\textbf{T}} (f);
+        \draw[->, thick] (h) to node[right, below]{\textbf{T}} (i);
+        % \draw[->, thick] (c) to[bend right] (e);
+        % \draw[->, thick] (d) to[bend left] (f);
+        % \draw[->, thick] (f) to (g);
+        % \draw[->, thick] (f) to[bend right] (h);
+    \end{tikzpicture}
 
     \newpage
 
     \question[3]{Pre and Post Processing}
+
+    a)
+    
+    Claim: if $\{u,v\}$ is an edge in an undirected graph, and during depth-first search 
+    
+    $\texttt{post}(u)<\texttt{post}(v)$, then $v$ is an ancestor of $u$ in the DFS tree.
+
+    \vspace{5pt}
+    
+    Proof:
+
+    We know there is an edge between $u$ and $v$. Given a DFS tree, there are two cases to consider 
+    
+    given that $\texttt{post}(u)<\texttt{post}(v)$. Furthermore, we must follow the property that for node $n$, 
+
+    $\texttt{pre}(n)<\texttt{post}(n)$. 
+
+    \vspace{7pt}
+
+    Case 1: $\texttt{pre}(v)<\texttt{pre}(u)<\underline{\texttt{post}(u)<\texttt{post}(v)}$
+
+    \vspace{2pt}
+
+    This represents a forward (tree) edge in the graph. According to the DFS algorithm, once $v$ has
+    
+    been visited, we must explore the neighbors of $v$, and after all of $v$'s ancestors have been explored, 
+    
+    will we assign $v$'s post number. Thus, we can confidently say that $v$ is an ancestor of $u$. 
+
+    \vspace{7pt}
+
+    Case 2: $\texttt{pre}(u)<\underline{\texttt{post}(u)<\texttt{pre}(v)<\texttt{post}(v)}$
+    
+    \vspace{2pt}
+
+    According to the DFS algorithm, we know that once $u$ has been visited, all of its neighbors and
+    
+    descendants must be visited before looking at $v$. This means that there exists no edge $\{u, v\}$ \faBolt
+
+    \vspace{2pt}
+
+    Therefore, we can say that if $\texttt{post}(u)<\texttt{post}(v)$, then $v$ is an ancestor of $u$. $\square$
+
+    \vspace{10pt}
+
+    b)
+
+    We can preprocess the graph by running a DFS algorithm on the graph and assigning pre and 
+    
+    post numbers to each of the nodes and storing them in a data structure that has constant lookup
+    
+    time. In this case, the data structure can be a hash map where the key is the value of the node
+    
+    and the value is the pre and post numbers stored in an array. Then, when we want to find if $u$
+
+    is an ancestor of $v$, we can simply refer to the data structure and see if $\texttt{post}(v) < \texttt{post}(u)$, and 
+    
+    if so, based on the proof above, we can say that $u$ is an ancestor of $v$.
+
+    
+
+    % \begin{algorithm}
+    %     \caption{Preprocessing a graph to find all node's pre and post numbers}
+% 
+    %     \SetKwFunction{findMajorityElement}{findMajorityElement}
+    %     \SetKwInOut{KwIn}{Input}
+    %     \SetKwInOut{KwOut}{Output}
+% 
+    %     \KwIn{$T = (V,E)$ (in adjacency list format)}
+    %     \KwOut{HashMap of all nodes (key: node value, value: array [pre(node), post(node)])}
+% 
+    %     $map \leftarrow \text{HashMap(value, int[2])}$
+    %     
+% 
+    % \end{algorithm}
+
 
     \newpage
 
@@ -81,7 +189,7 @@
 
     a) (pre, post)
     
-    \vspace{3pt}
+    \vspace{5pt}
 
     \begin{tikzpicture}[scale=1.5,auto=center]
 
@@ -107,15 +215,24 @@
         
     \end{tikzpicture}
 
-    \vspace{4pt}
+    $A$: (1, 14)
+    $B$: (15, 16)
+    $C$: (2, 9)
+    $D$: (10, 13)
+    $E$: (3, 8)
+    $F$: (11, 12)
+    $G$: (4, 5)
+    $H$: (6, 7)
+
+    \vspace{5pt}
 
     b) Source Nodes: $A, B$
 
     \hspace{10pt} Sink Nodes: $G, H$
 
-    \vspace{4pt}
+    \vspace{5pt}
 
-    c) 
+    c)
 
     \begin{tikzpicture}[scale=0.9,auto=center]
         \node[circle, draw] (a) at (0, 0) {$A$};
@@ -138,5 +255,11 @@
         
     \end{tikzpicture}
 
-    d) This graph will have 8 total linearizations 
+    \vspace{5pt}
+
+    d) This graph will have 8 total linearizations because at node $C$ and node $F$, we can go in two 
+    
+    \hspace{12pt}different directions. Furthermore, we could either start from $A$ or $B$, so that gives us 2 more 
+    
+    \hspace{12pt}options. Thus, $2 \cdot 2 \cdot 2 = 8$.
 \end{document}
