@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1666309191 "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.tex" "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.pdf" "hw6" 1666309193
-  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.aux" 1666309192 304 5714ce4bc7422e3a0c0bfb1ca2594bba ""
-  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.tex" 1666309191 7743 7281631c59bcb9df458dbf69a9222863 ""
+["pdflatex"] 1666314544 "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.tex" "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.pdf" "hw6" 1666314545
+  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.aux" 1666314545 304 c2e4cf26c7da864a757902a52dff6612 ""
+  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.tex" 1666314544 8459 ed8ca822de350f1563424d4f61ece593 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -163,11 +163,12 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw6.aux" 1666309192 304 5714ce4bc7422e3a0c0bfb1ca2594bba "pdflatex"
-  "hw6.tex" 1666309191 7743 7281631c59bcb9df458dbf69a9222863 ""
+  "hw6.aux" 1666314545 304 c2e4cf26c7da864a757902a52dff6612 "pdflatex"
+  "hw6.tex" 1666314544 8459 ed8ca822de350f1563424d4f61ece593 ""
+  "s.jpeg" 1666313115 228990 c5691ea7789a04e66ec781bc99bfd993 ""
   (generated)
+  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.pdf"
+  "hw6.aux"
   "hw6.log"
   "hw6.pdf"
-  "hw6.aux"
-  "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.pdf"
   "/Users/kinner/Documents/School/CMPSC465/Homewok 6/hw6.log"

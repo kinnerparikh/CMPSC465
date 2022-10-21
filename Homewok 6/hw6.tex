@@ -214,16 +214,32 @@
 
     Gathering all the edges will take $\Theta(2E)$. Then sorting will be $O(E \log E)$. The binary traversal 
     
-    takes $\Theta(\log E)$. And with each iteration of the binary traversal, feasibleRoute takes $O(|V|+|E|)$.
+    takes $\Theta(\log E)$. And with each iteration of the binary traversal, feasibleRoute takes $O(|V|+|E|)$. 
+    
+    So, the leastMaxDistance will take $\Theta(2E) + O(E \log E) +  \Theta(\log E) \cdot O(|V|+|E|)$ which is equal 
+    
+    to $O((|V|+|E|) \log E)$. 
 
     \newpage
 
-    \question[3]{}
+    \question[3]{Shortest bitonic paths}
+
+    a)
+
+    b)
+
+
     
     \newpage
 
-    
+    \question[4]{Dijkstra's on negative}
 
+    a)
 
+    \includegraphics[scale=0.2]{s.jpeg}
+
+    b)
+
+    The termination of the while loop is that the heap is empty. Every single time the loop runs, the vertex that has the minimum distance is removed from H. In the event of a negative edge going to a node that has already been removed, it will update the distance of that already removed node, but it will not update the rest of the nodes that come after the removed node because it will never be visited in the loop again.
 
 \end{document}
