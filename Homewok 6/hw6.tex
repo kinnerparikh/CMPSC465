@@ -224,9 +224,9 @@
 
     \question[3]{Shortest bitonic paths}
 
-    a)
+    a) Because the property states that all paths from $s$ to $v$ are strictly increasing and unique, we can determine that there is exactly one order of increasing weights for the path of $s$ to $v$. Because of this fact, we can get the path from $s$ to $v$ and its corresponding edge weights, and sort these weights ($O(E \log E)$). Then we can relax the edges in that order, which will take $O(E)$ time. This is an adaptation of the Bellman-Ford Algorithm, we can say that the preprocessing will take $O(V)$, thus the overall runtime will be $O(E \log E) + O(E) + O(V) = O(V + E \log E)$.
 
-    b)
+    b) Similar to the algorithm above, because the paths are strictly bitonic, this means that there are exactly two orders of increasing and two orders of decreasing weights for the path from $s$ to $v$. Applying the same principle above, we can relax the edges of the graph first in the order of the two increasing weight paths then the two decreasing weight paths. Thus, same to the algorithm above, sorting will take $O(E \log E)$ and relaxing the edges will take $O(E)$, so the final runtime will be $O(V + E \log E)$.
 
 
     
