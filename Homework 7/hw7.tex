@@ -56,6 +56,31 @@
 
     \question[2]{}
 
+    This statement is false. When $f$ is the maximum flow between $s$ and $t$, $f$ does not saturate every edge because in a given flow network, the maximum flow is simply the bottleneck of a given path. For example, given $G$:
+
+    \begin{tikzpicture}[scale=1,auto=center]
+
+        \node[circle, draw] (s) at (0, 1) {$s$};
+        \node[circle, draw] (a) at (2, 2) {$a$};
+        \node[circle, draw] (b) at (2, 0) {$b$};
+        \node[circle, draw] (t) at (4, 1) {$t$};
+
+        %\draw[->] (s) tonode[above]{0/10} (a);
+        % \draw[->] (s) tonode[above]{5/10} (c);
+        % \draw[->] (a) tonode[above]{5/25} (b);
+        % \draw[->] (c) tonode[above]{5/15} (d);
+        % \draw[->] (d) tonode[above]{5/5} (a);
+        %\draw[->] (d) tonode[above]{0/10} (t);
+        % \draw[->] (b) tonode[above]{5/10} (t);
+        \draw[->] (s) tonode[above]{5/5} (a);
+        \draw[->] (s) tonode[above]{4/5} (b);
+        \draw[->] (a) tonode[above]{5/5} (t);
+        \draw[->] (b) tonode[above]{4/4} (t);
+
+    \end{tikzpicture}
+
+    We can see that the maximum flow from $s$ to $t$ is 9 because of the bottleneck edge $(b, t)$. This means on the path that follows $(s, b, t)$, not every edge is saturated. So this counterexample proves that not every edge out of $s$ is saturated.
+
     \newpage
 
     \question[3]{}
