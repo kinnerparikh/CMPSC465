@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1666907615 "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.pdf" "hw7" 1666907616
-  "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.aux" 1666907616 69 b9f8f0f77263b2cf22cffb831398601e ""
-  "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.tex" 1666907615 2229 3a6665191aaec11bbf62bdf6a7825787 ""
+["pdflatex"] 1666912821 "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.pdf" "hw7" 1666912823
+  "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.aux" 1666912822 69 b9564f5832ca1e521a55fe574d972060 ""
+  "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.tex" 1666912821 6176 9bf30d0ef0260714af0a0e42ce959184 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -21,7 +21,9 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1583617216 6501 4011d89d9621e0b0901138815ba5ff29 ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -157,11 +159,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw7.aux" 1666907616 69 b9f8f0f77263b2cf22cffb831398601e "pdflatex"
-  "hw7.tex" 1666907615 2229 3a6665191aaec11bbf62bdf6a7825787 ""
+  "hw7.aux" 1666912822 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
+  "hw7.tex" 1666912821 6176 9bf30d0ef0260714af0a0e42ce959184 ""
   (generated)
+  "hw7.pdf"
   "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.pdf"
   "hw7.log"
-  "hw7.pdf"
   "hw7.aux"
   "/Users/kinner/Documents/School/CMPSC465/Homework 7/hw7.log"
