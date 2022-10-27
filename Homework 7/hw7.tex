@@ -1,0 +1,66 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[6]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I worked with Sahil Kuwadia and Ethan Yeung
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{}
+
+    \newpage
+
+    \question[3]{}
+
+    We can find the solution to this problem by creating a maximum flow network graph. We can first create a node for every patient ($p_i$ where $i \in [1,n]$) and every hospital ($h_j$ where $j \in [1,k]$) in the area. Then, create an edge from every patient to every hospital ($p_i, h_j$), and set the maximum capacity of that edge to 1 if and only if $p_i$ can get to $h_j$ within the half hour time limit, else set the capacity to 0. Now 
+
+    
+\end{document}
