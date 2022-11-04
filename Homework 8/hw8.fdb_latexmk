@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1667523398 "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.pdf" "hw8" 1667523399
-  "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.aux" 1667523399 69 b9564f5832ca1e521a55fe574d972060 ""
-  "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.tex" 1667523398 3739 29b74a83bca2fd9ab170ed88200b88d2 ""
+["pdflatex"] 1667524451 "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.pdf" "hw8" 1667524496
+  "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.aux" 1667524452 69 b9564f5832ca1e521a55fe574d972060 ""
+  "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.tex" 1667524496 4403 2b5bb431300674376d486c26e6f03ed4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -160,11 +160,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw8.aux" 1667523399 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
-  "hw8.tex" 1667523398 3739 29b74a83bca2fd9ab170ed88200b88d2 ""
+  "hw8.aux" 1667524452 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
+  "hw8.tex" 1667524496 4403 2b5bb431300674376d486c26e6f03ed4 ""
   (generated)
-  "hw8.pdf"
   "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.log"
-  "hw8.aux"
   "hw8.log"
+  "hw8.pdf"
   "/Users/kinner/Documents/School/CMPSC465/Homework 8/hw8.pdf"
+  "hw8.aux"

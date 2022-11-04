@@ -67,8 +67,10 @@
 
     \newpage
 
-    \question[4]{Let $T$ be a minimum spanning tree of a graph $G = (V,E)$ and $V'$ be a subset of $V$. Let $T'$ be a subgraph of T induced by $V'$ (i.e., an edge $(u,v) \in T$ is present in $T'$ iff both $(u,v) \in V'$) and $G'$ be a subgraph of $G$ induced by $V'$. Show that if $T'$ is connected, then $T'$ is a minimum spanning tree of $G'$.}
+    \question[4]{Let $T$ be a minimum spanning tree of a graph $G = (V,E)$ and $V'$ be a subset of $V$. Let $T'$ be a subgraph of $T$ induced by $V'$ (i.e., an edge $(u,v) \in T$ is present in $T'$ iff both $(u,v) \in V'$) and $G'$ be a subgraph of $G$ induced by $V'$. Show that if $T'$ is connected, then $T'$ is a minimum spanning tree of $G'$.}
 
-    
+    % We know that $T$ is an MST of $G$. We also know that $T'$ is a subgraph of $T$. FSOC, assume that $T'$ is not an MST for $G'$. Assuming that $S$ is a valid MST of $G'$.
+
+    We know that $T$ is an MST of $G$. We also know that $T'$ is a subgraph of $T$. FSOC, assume that $T'$ is not an MST for $G'$. Let $S$ be a valid MST of $G'$. We know that $S$ is a subgraph of $T'$, so $S$ is a subgraph of $T$. We also know that $S$ is a subgraph of $G'$. Thus, $S$ is a subgraph of $G$. We know that $S$ is a valid MST of $G'$. We know that $T$ is a valid MST of $G$, so $T$ is a valid MST of $G$. Thus, $T = S$, which is a contradiction. Thus, $T'$ is an MST of $G'$.
 
 \end{document}
