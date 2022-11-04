@@ -1,0 +1,74 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[6]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I worked with Sahil Kuwadia and Ethan Yeung
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Let G = (V,E) be a directed graph, with source $s\in V$, sink $t \in V$ and nonnegative edge capacities \{$c_e$\}. Give a polynomial time algorithm to decide whether G has a unique minimum s-t cut.}
+
+    We can start by finding the maximum flow through $G$ by running the Ford-Fulkerson algorithm. We know that the maximum flow through $G$ is the minimum cut of $G$, set this value to C. To find if this cut is unique, we iterate through all edges taking edge $e$, and set its capacity to $c_e + 1$. We can then find the maximum flow through this new graph and set this new capacity to $C_e$. Once we have computed the capacity, reset $c_e$ to its original value. If $\forall C_e = C$, then the cut is not unique. If $\exists! C_e \neq C$, then the cut is unique. Since Ford-Fulkerson runs in polynomial time, and we are running it at most $|E| + 1$ times, this algorithm runs in polynomial time.
+
+    \newpage
+
+    \question[3]{Let T be an MST of graph $G$. Given a connected subgraph $H$ of $G$, show that $T \cap H$ is contained in some MST of $H$.}
+
+
+    The cut property states that $A$ as a subset of edges from some MST of $G$. Let $(S, V-S)$ be a cut that respects $A$ and let $e$ be the lightest edge across the cut. Then we know that $A \cup \{e\}$ is part of some MST. Using this property, take edge $e$ which is the lightest edge in $H$, thus we know that $e \in T \cap H$. We can then take $e$ as the cut edge for $H$, so the cut set is $(H \cap S, H - S)$ (similar to the property above). Because $e \in T \cap H$, the same cut exists in some MST of $H$, proving that $T \cap H$ is contained in some MST of $H$. 
+
+    \newpage
+
+    \question[4]{Let $T$ be a minimum spanning tree of a graph $G = (V,E)$ and $V'$ be a subset of $V$. Let $T'$ be a subgraph of T induced by $V'$ (i.e., an edge $(u,v) \in T$ is present in $T'$ iff both $(u,v) \in V'$) and $G'$ be a subgraph of $G$ induced by $V'$. Show that if $T'$ is connected, then $T'$ is a minimum spanning tree of $G'$.}
+
+    
+
+\end{document}
