@@ -1,0 +1,75 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[9]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I worked with Sahil Kuwadia and Ethan Yeung
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Suppose we have an optimal prefix code on a set $C = \{0,1,...,n-1\}$ of characters and we wish to transmit this code using as few bits as possible. Show how to represent any optimal prefix code on C using only $2n-1 + n\lceil \log n \rceil$ bits.}
+
+    Since there are $n$ characters, there are $n$ leaves in the tree. Thus, there will be $n-1$ vertices within the graph, so the entire graph will contain $2n-1$ total vertices, thus $2n-1$ bits. The height of a full binary tree for $n$ characters is $\lceil \log n \rceil$. 
+
+    We can say that to associate the members of C with the leaves of the tree, $\lceil \log n \rceil$ bits will be enough to represent all members. We know that no delimiters are required if each character is represented by a unique prefix. So, with $n$ leaves, it requires $n \lceil \log n \rceil$ bits to represent all characters.
+    
+    Thus, we can say that the total number of bits required to represent the optimal prefix code is $2n-1 + n\lceil \log n \rceil$.
+
+    \newpage
+
+    \question[3]{Generalize Huffman's algorithm to ternary codewords (i.e., codewords using the symbols 0, 1, and 2), and prove that it yields optimal ternary codes.}
+
+
+    \newpage
+
+    \question[4]{}
+
+
+\end{document}
