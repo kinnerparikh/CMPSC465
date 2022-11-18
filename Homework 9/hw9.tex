@@ -10,6 +10,7 @@
 \usepackage{xcolor,colortbl, amssymb}
 \usepackage{forest}
 \usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
+\usepackage{tikz}
 
 % https://www.messletters.com/en/big-text/
 
@@ -58,7 +59,7 @@
 
     Since there are $n$ characters, there are $n$ leaves in the tree. Thus, there will be $n-1$ vertices within the graph, so the entire graph will contain $2n-1$ total vertices, thus $2n-1$ bits. The height of a full binary tree for $n$ characters is $\lceil \log n \rceil$. 
 
-    We can say that to associate the members of C with the leaves of the tree, $\lceil \log n \rceil$ bits will be enough to represent all members. We know that no delimiters are required if each character is represented by a unique prefix. So, with $n$ leaves, it requires $n \lceil \log n \rceil$ bits to represent all characters.
+    We can say that to associate the members of C with the leaves of the tree, $\lceil \log n \rceil$ bits will be enough to represent all members. We know that no padding bits are required because each character is represented by a unique prefix. So, with $n$ leaves, it requires $n \lceil \log n \rceil$ bits to represent all characters.
     
     Thus, we can say that the total number of bits required to represent the optimal prefix code is $2n-1 + n\lceil \log n \rceil$.
 
@@ -66,6 +67,56 @@
 
     \question[3]{Generalize Huffman's algorithm to ternary codewords (i.e., codewords using the symbols 0, 1, and 2), and prove that it yields optimal ternary codes.}
 
+    \begin{algorithm}
+        \caption{Huffman's Algorithm for Ternary Codes}
+        \KwIn{$f : f[1 \dots n]$}
+        \KwOut{$T : $ a tree with $n$ leaves}
+
+        $T$: empty tree;
+        
+        $H$: priority queue ordered by $f$;
+        
+        \For{$i := 1 \textbf{ in } n$}{
+            insert($H$, $i$);
+        }
+
+        \For{$k := n + 1 \textbf{ in } \lceil 2n-n/2 \rceil$}{
+            i := extract\_min($H$);
+
+            j := extract\_min($H$);
+
+            k := extract\_min($H$);
+
+            Create a node $r$ in $T$ with children $i, j, k$;
+
+            $f[r] = f[i] + f[j] + f[k];$
+
+            insert($H$, $r$);
+        }
+
+        \Return{T}
+    \end{algorithm}
+
+    Claim: Huffman's algorithm for ternary codes yields an optimal ternary code. Every optimal solution has three least frequent symbols as leaves connected to an internal node of greatest depth
+
+    Proof: Let $T$ be an optimal ternary code. Let $i, j, k$ be the three least frequent symbols. Let $r$ be the internal node of greatest depth. Let $T'$ be the tree obtained from $T$ by removing $i, j, k$ and $r$. Let $T''$ be the tree obtained from $T$ by removing $r$. Then $T'$ is an optimal ternary code and $T''$ is an optimal binary code.
+
+    % Consider an optimal solution for $(f_1, f_2, \cdots, f_n)$ with $f_1, f_2, f_3$ the least frequent. Then the subproblem is to find an optimal solution for $(f_1 + f_2 + f_3, \cdots, f_n)$.
+    % 
+    % \begin{tikzpicture}
+    %     \node[circle, draw] (1) at (1,5) {$1$};
+    %     \node[circle, draw] (2) at (0,4) {$2$};
+    %     \node[circle, draw] (3) at (2,4) {$3$};
+    %     \node (4) at (0,3) {Optimal solution};
+    %     \node[circle, draw, filled] (5) at (2,3) {$5$};
+    % 
+    %     %\draw[->] (1) -- (2);
+    %     %\draw[->] (1) -- (3);
+    %     \path (1) edge (2);
+    %     \path (1) edge (3);
+    %     \path (2) edge[thin, -, dotted] (4);
+    %     \path (3) edge[thin, -, dotted] (5);
+    % \end{tikzpicture}
 
     \newpage
 
