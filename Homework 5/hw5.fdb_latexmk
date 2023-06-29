@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1665017310 "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf" "hw5" 1665017311
-  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux" 1665017311 69 b9564f5832ca1e521a55fe574d972060 ""
-  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.tex" 1665017309 8743 9808a6b2eb208e43b64802e7b69b07ae ""
+["pdflatex"] 1688054684 "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf" "hw5" 1688054685
+  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.aux" 1688054685 69 b9564f5832ca1e521a55fe574d972060 ""
+  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.tex" 1688054684 8743 c27a5016d51a56ac309c30da700b51bd ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc" 1463430686 2679 32dd8ae231bf4a0752b98f62dc097183 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -171,11 +171,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw5.aux" 1665017311 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
-  "hw5.tex" 1665017309 8743 9808a6b2eb208e43b64802e7b69b07ae ""
+  "hw5.aux" 1688054685 69 b9564f5832ca1e521a55fe574d972060 "pdflatex"
+  "hw5.tex" 1688054684 8743 c27a5016d51a56ac309c30da700b51bd ""
   (generated)
-  "hw5.log"
-  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf"
-  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.log"
-  "hw5.pdf"
   "hw5.aux"
+  "hw5.pdf"
+  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.log"
+  "/Users/kinner/Documents/School/CMPSC465/Homework 5/hw5.pdf"
+  "hw5.log"

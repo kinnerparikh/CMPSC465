@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1663981213 "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.pdf" "hw4" 1663981214
-  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux" 1663981213 208 7b0254fd4d9f3932da2c785c111cb7ad ""
-  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex" 1663981213 2714 6a3a719853fc931e2162bfcca6882d53 ""
+["pdflatex"] 1688054676 "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex" "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.pdf" "hw4" 1688054677
+  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.aux" 1688054677 208 7b0254fd4d9f3932da2c785c111cb7ad ""
+  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.tex" 1688054676 2715 ccb6c063d32a5c9b2f4796ef06bc820d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -159,11 +159,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw4.aux" 1663981213 208 7b0254fd4d9f3932da2c785c111cb7ad "pdflatex"
-  "hw4.tex" 1663981213 2714 6a3a719853fc931e2162bfcca6882d53 ""
+  "hw4.aux" 1688054677 208 7b0254fd4d9f3932da2c785c111cb7ad "pdflatex"
+  "hw4.tex" 1688054676 2715 ccb6c063d32a5c9b2f4796ef06bc820d ""
   (generated)
-  "hw4.log"
-  "hw4.aux"
   "hw4.pdf"
-  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.log"
+  "hw4.aux"
+  "hw4.log"
   "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.pdf"
+  "/Users/kinner/Documents/School/CMPSC465/Homework 4/hw4.log"
