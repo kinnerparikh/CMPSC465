@@ -1,0 +1,140 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{forest}
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e}
+\usepackage{tikz}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Problem #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 465} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{40pt}
+
+
+        \newpage
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[10]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    \question[1]{}
+    \begin{center}
+        
+        I did not work with anyone
+    
+        I did not consult without anyone my group member
+    
+        I did not consult any non-class materials
+    \end{center}
+    
+    \newpage
+
+    \question[2]{Apply the greedy algorithm for Horn formulas (covered in the lecture) to find the variable assignment that solves the following horn formulas:}
+
+    1. $(w \land  y \land z) \Rightarrow x, (x \land z) \Rightarrow w, x \Rightarrow y,\Rightarrow x, (x \land y) \Rightarrow w, (\bar{w} \lor \bar{x} \lor \bar{y}), (\bar{z})$
+
+    To find if this is valid, we first set all the variables to false. Then, we go through the list of clauses and check if the clause is true. If it is true, we move on to the next clause. If it is false, we check if the clause is a horn clause. If it is a horn clause, we set the variable to true and move on to the next clause. If it is not a horn clause, we move on to the next clause. We repeat this process until we have gone through all the clauses. If we have gone through all the clauses and all of them are true, then the formula is valid. If we have gone through all the clauses and at least one of them is false, then the formula is not valid. We set $x$ to true from the $\Rightarrow x$ statement. From this, we know that $y$ is true because of $x \Rightarrow y$. $w$ must also be true because $(x \land y) \Rightarrow w$. Plugging these into $(\bar{w} \lor \bar{x} \lor \bar{y})$, it evaluates to false. Even though $\bar{z}$ is true, all complete negative statements do not evaluate to true, so there is no valid variable assignment.
+
+    2. $(x \land z) \Rightarrow y, z \Rightarrow w, (y \land z) \Rightarrow x, \Rightarrow z, (\bar{z} \lor \bar{x}), (\bar{w} \lor \bar{y} \lor \bar{z})$
+    
+    Using the same rules as defined above, we know that $z$ must be true from $\Rightarrow z$. $w$ must be true as well from $z \Rightarrow w$. All other statements evaluate correctly, so $x$ and $y$ remain false. Plugging these into $(\bar{z} \lor \bar{x})$ and $(\bar{w} \lor \bar{y} \lor \bar{z})$, they evaluate to true. There is a valid variable assignment. The statement that solves the horn formula is $z \Rightarrow w$.
+
+    \newpage
+
+    \question[3]{Linear time algorithm}
+    
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \caption{Contiguous Subarray of Maximum Sum}
+        \KwIn{A list of numbers $S = a_1, a_2, \dots, a_n$}
+        \KwOut{The contiguous subsequence of maximum sum (a subsequence of length zero has sum zero)}
+
+        maxSoFar $\gets$ $S[1]$\;
+        currMax $\gets$ $S[1]$\;
+        start, end, sFast $\gets$ 1, 1, 1\;
+
+        \For{$i \gets 2$ \KwTo $n$}{
+            currMax = $max(S[i], currMax + S[i])$\;
+            \If{maxSoFar $<$ currMax}{
+                maxSoFar $\gets$ currMax\;
+                start $\gets$ sFast\;
+                end $\gets$ $i$\;
+            }
+            \If{currMax $<$ 0}{
+                s $\gets$ $i + 1$\;
+            }
+        }
+        \Return{subarray $S[start, end + 1]$};
+    \end{algorithm}
+
+    % loop invariant for contiguous subarray of maximum sum
+    maxSubArray($S[1 \dots i]$) = max($S[i]$, maxSubArray($S[1 \dots i - 1]$) + $S[i]$)
+
+    This recurrence relation takes the list of numbers between 1 and an index $i$ where $i \leq n$, and finds the maximum subarray within that subarray. As we continue, the outer subarray will continue to grow and we can grow to find the overall subarray with the largest sum. Because this algorithm traverses the list of numbers once, the time complexity is $O(n)$.
+
+    \newpage
+
+    \question[4]{Find length of longest common substring in O(mn) time}
+
+    \begin{algorithm}
+        \caption{Length of the longest common substring}
+        \KwIn{Two strings $S_1$ and $S_2$}
+        \KwOut{The length of the longest common substring}
+
+        $n \gets$ $length(S_1)$\;
+        $m \gets$ $length(S_2)$\;
+        $LCS[1 \dots n][1 \dots m] \gets$ 0\;
+        %$longest \gets 0$
+
+        \For{$i \gets 1$ \KwTo $n$}{
+            \For{$j \gets 1$ \KwTo $m$}{
+                \If{$S_1[i] = S_2[j]$ and $i > 1$ and $j > 1$}{
+                    $LCS[i][j] \gets LCS[i - 1][j - 1] + 1$\;
+                    %$longest \gets max(longest, LCS[i][j])$\;
+                }
+                \Else{
+                    $LCS[i][j] \gets 0$\;
+                }
+            }
+        }
+        \Return{max(LCS)};
+    \end{algorithm}
+
+    % recurrence relation for longest common substring
+    \begin{equation}
+        LCS(i, j) = \begin{cases}
+            0 & \text{if $S_1[i] \neq S_2[j]$}\\
+            LCS(i - 1, j - 1) + 1 & \text{if $S_1[i] = S_2[j]$}
+        \end{cases}
+    \end{equation}
+
+    If two characters in the two strings are the same, then we can assume that it will be the start of the longest substring, so we want to increment the count by one at that index. If it continues to be a substring, then $LCS(i+1, j+1)$ will hold the value $LCS(i, j) + 1$. We run through each of the strings once. The time complexity is $O(mn)$.
+
+
+\end{document}

@@ -101,26 +101,16 @@
 
     Proof: Let $T$ be an optimal ternary code. Let $i, j, k$ be the three least frequent symbols. Let $r$ be the internal node of greatest depth. Let $T'$ be the tree obtained from $T$ by removing $i, j, k$ and $r$. Let $T''$ be the tree obtained from $T$ by removing $r$. Then $T'$ is an optimal ternary code and $T''$ is an optimal binary code.
 
-    % Consider an optimal solution for $(f_1, f_2, \cdots, f_n)$ with $f_1, f_2, f_3$ the least frequent. Then the subproblem is to find an optimal solution for $(f_1 + f_2 + f_3, \cdots, f_n)$.
-    % 
-    % \begin{tikzpicture}
-    %     \node[circle, draw] (1) at (1,5) {$1$};
-    %     \node[circle, draw] (2) at (0,4) {$2$};
-    %     \node[circle, draw] (3) at (2,4) {$3$};
-    %     \node (4) at (0,3) {Optimal solution};
-    %     \node[circle, draw, filled] (5) at (2,3) {$5$};
-    % 
-    %     %\draw[->] (1) -- (2);
-    %     %\draw[->] (1) -- (3);
-    %     \path (1) edge (2);
-    %     \path (1) edge (3);
-    %     \path (2) edge[thin, -, dotted] (4);
-    %     \path (3) edge[thin, -, dotted] (5);
-    % \end{tikzpicture}
-
     \newpage
 
     \question[4]{}
 
+    For sake of contradiction, assume that the greedy algorithm is not optimal. Given a solution provided by the greedy algorithm represented in a numbered set $T$ of size $n$. So a package $p_i \in T$ where $i$ is the indexed number of the package. Each package has a weight $w_i$ and a corresponding truck $t_j$ that it is assigned to be on. 
+    
+    Since we know that the greedy algorithm is not optimal, there must be an optimal solution $T'$. Assume that $T'$ has $m$ trucks and assume that $T$ has $n$ trucks. We can say that $m \leq n$. For this proof, we will assume that $T' \in T$ such that $T'$ is a subset of $T$. 
+
+    Let's say that truck $t'_m$ is the last truck in $T'$. If $t'_m > t_m$, then we arrive at a contradiction because the greedy solution utilized more trucks than the optimal solution, which is not valid. If $t'_m < t_m$, then we can say that the greedy solution utilized less trucks than the optimal solution, which is also not valid. 
+    
+    Thus, we can conclude that the greedy solution is the optimal solution.
 
 \end{document}
